@@ -1,0 +1,32 @@
+{
+  "exampleType": "synthetic-portfolio-example",
+  "disclaimer": "Illustrative data only. This is not a real student or production record.",
+  "interestProfile": [
+    "Technology",
+    "Innovation",
+    "Problem-Solving",
+    "Security",
+    "Critical Thinking",
+    "Data Analysis"
+  ],
+  "recommendations": [
+    {
+      "rank": 1,
+      "programme": "Example Technology Programme A",
+      "match": "high",
+      "explanation": "Strong alignment with technology, security and problem-solving interests."
+    },
+    {
+      "rank": 2,
+      "programme": "Example Technology Programme B",
+      "match": "moderate-high",
+      "explanation": "Alignment with technology, data analysis and critical-thinking interests."
+    },
+    {
+      "rank": 3,
+      "programme": "Example Digital Programme C",
+      "match": "moderate",
+      "explanation": "Alignment with technology and innovation interests."
+    }
+  ]
+}
