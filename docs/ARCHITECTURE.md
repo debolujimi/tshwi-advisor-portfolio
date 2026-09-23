@@ -6,38 +6,36 @@ Tshwi Advisor separates the student interaction layer, recommendation logic, pro
 
 ## Logical architecture
 
-```text
-+-----------------------------+
-| Prospective Student         |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-| Responsive Web Application  |
-| Assessment | Courses | UI   |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-| Application/API Layer       |
-| Validation | Access Control |
-+------+----------------------+
-       |
-       +-------------------+
-       |                   |
-       v                   v
-+--------------+    +-------------------+
-| Recommendation|    | Programme         |
-| Engine        |<---| Knowledge Base    |
-+------+--------+    +-------------------+
-       |
-       v
-+-----------------------------+
-| Ranked, Explainable Results |
-+-----------------------------+
+ ```mermaid
+flowchart LR
+    U[Prospective Student] --> UI[Responsive Web Application]
+    UI --> API[Application / API Layer]
+    API --> V[Validation & Request Controls]
+    V --> RE[Recommendation Engine]
+    KB[(Programme Knowledge Base)] --> RE
+    RE --> OUT[Ranked Explainable Results]
 
-Protected production services:
-Persistence | Authentication | Administration | Audit/Security Controls
+    API --> AUTH[Protected Authentication & Authorisation]
+    AUTH --> ADMIN[Administrative Functions]
+    API --> P[(Persistence Services)]
+
+    classDef protected stroke-dasharray: 5 5;
+    class AUTH,ADMIN,P protected;
+```
+
+### Recommendation path
+
+```mermaid
+flowchart TD
+    A[Structured Assessment Answers] --> B[Interest Signals]
+    B --> C[Weighted Interest Profile]
+    C --> D[Programme-domain Comparison]
+    K[(Curated Programme Knowledge)] --> D
+    D --> E[Domain Discrimination]
+    E --> F[Specificity Weighting]
+    F --> G[Normalised Matching]
+    G --> H[Ranked Top-3 Recommendations]
+    H --> I[Student-facing Explanation]
 ```
 
 ## Design principles
