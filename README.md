@@ -20,31 +20,33 @@ The system is deliberately **explainable and deterministic**. It does not claim 
 
 ## Architecture
 
-```text
-Prospective Student
-        |
-        v
-Responsive Web Interface
-        |
-        v
-Structured Career Assessment
-        |
-        v
-Weighted Interest Profile
-        |
-        v
-Explainable Recommendation Engine
-        |
-        +------> Programme Knowledge Base
-        |
-        v
-Ranked Top-3 Recommendations
-        |
-        v
-Student-facing Results
+```mermaid
+flowchart LR
+    U[Prospective Student] --> W[Responsive Web Application]
+    W --> A[Structured Career Assessment]
+    A --> P[Weighted Interest Profile]
+    P --> R[Explainable Recommendation Engine]
+    K[(Programme Knowledge Base)] --> R
+    R --> T[Ranked Top-3 Recommendations]
+    T --> S[Student-facing Results]
 ```
 
 The production platform additionally contains protected administrative, persistence, privacy and security services that are documented here only at an appropriate architectural level.
+
+See the [full system architecture](docs/ARCHITECTURE.md).
+
+## AI recommendation pipeline
+
+```mermaid
+flowchart LR
+    Q[1. Career Assessment] --> I[2. Interest Signals]
+    I --> W[3. Weighted Interest Profile]
+    W --> M[4. Knowledge-base Matching]
+    K[(Programme Knowledge Base)] --> M
+    M --> D[5. Domain Discrimination & Specificity]
+    D --> N[6. Normalised Match Scores]
+    N --> O[7. Ranked Top-3 Programmes]
+```
 
 ## AI methodology
 
@@ -107,6 +109,12 @@ See [Privacy and Security](docs/PRIVACY-AND-SECURITY.md).
 The production system uses a modern TypeScript web stack, including **Next.js**, **Node.js/Express**, **PostgreSQL**, **Prisma**, cloud-hosted frontend/backend services, GitHub-based source control and CI workflows, and **k6** for synthetic load testing.
 
 This portfolio intentionally omits security-sensitive deployment details.
+
+## Application showcase
+
+The live application includes the student-facing homepage, structured career assessment, ranked recommendation results, programme catalogue and responsive mobile experience. To protect the integrity of this portfolio, screenshots will only be added from the **actual deployed application** rather than reconstructed or illustrative interfaces.
+
+> **Screenshot policy:** no real student/lead information, administrative records, credentials or other personal information will be published.
 
 ## Public portfolio contents
 
