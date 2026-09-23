@@ -112,9 +112,39 @@ This portfolio intentionally omits security-sensitive deployment details.
 
 ## Application showcase
 
-The live application includes the student-facing homepage, structured career assessment, ranked recommendation results, programme catalogue and responsive mobile experience. To protect the integrity of this portfolio, screenshots will only be added from the **actual deployed application** rather than reconstructed or illustrative interfaces.
+The screenshots below are from the **actual deployed Tshwi Advisor application**. No real student/lead information, administrative records or credentials are shown.
 
-> **Screenshot policy:** no real student/lead information, administrative records, credentials or other personal information will be published.
+### Homepage
+
+![Tshwi Advisor homepage](assets/screenshots/Homepage.png)
+
+*Production homepage providing direct access to the career quiz and programme catalogue.*
+
+### Career assessment
+
+![Tshwi Advisor career assessment](assets/screenshots/Career%20Assessment.png)
+
+*Structured 15-question career-interest assessment used to derive the student's interest profile.*
+
+### Explainable recommendation results
+
+![Tshwi Advisor recommendation results](assets/screenshots/Recommendation%20Results.png)
+
+*Ranked programme recommendations showing fit percentages and human-readable explanations of the interest signals contributing to each match.*
+
+### Programme catalogue
+
+![Tshwi Advisor programme catalogue](assets/screenshots/Programme%20Catalogue.png)
+
+*Searchable programme catalogue with category and NQF-level filtering.*
+
+### Responsive mobile experience
+
+<p align="center">
+  <img src="assets/screenshots/Mobile%20View.jpeg" alt="Tshwi Advisor mobile programme catalogue" width="360">
+</p>
+
+*Responsive mobile presentation of the programme-discovery experience.*
 
 ## Public portfolio contents
 
